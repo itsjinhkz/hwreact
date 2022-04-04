@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "antd/dist/antd.css";
+import NavbarQuanLySinhVien from "./Pages/NavbarQuanLySinhVien/NavBarQuanLySinhVien";
+import { Route, Switch } from "react-router";
+import QuanLySinhVien from "./Pages/QuanLySinhVien/QuanLySinhVien";
+import ChiTietSinhVien from "./Pages/ChiTietSinhVien/ChiTietSinhVien";
+import ThemSinhVien from "./Pages/ThemSinhVien/ThemSinhVien";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavbarQuanLySinhVien />
+      <Switch>
+        <Route exact path="/">
+          <h1>Danh Sách Sinh Viên</h1>
+          <QuanLySinhVien />
+        </Route>
+        <Route path="/detail">
+          <ChiTietSinhVien />
+        </Route>
+        <Route path="/themsinhvien">
+          <ThemSinhVien />
+        </Route>
+      </Switch>
     </div>
   );
 }
