@@ -24,7 +24,7 @@ export default class NavBarQuanLySinhVien extends Component {
             <li className="nav-item active">
               <NavLink
                 exact
-                activeClassName="active"
+                activeClassName="text-danger"
                 className="nav-link"
                 to="/"
               >
@@ -34,7 +34,7 @@ export default class NavBarQuanLySinhVien extends Component {
             <li className="nav-item active">
               <NavLink
                 exact
-                activeClassName="active"
+                activeClassName="text-danger"
                 className="nav-link"
                 to="/themsinhvien"
               >
